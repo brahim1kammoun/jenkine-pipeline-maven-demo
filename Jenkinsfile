@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven "3.6.0"
+    }
+
     stages {
         stage("Build") {
             steps {
@@ -10,9 +14,9 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            cleanWs()
-        }
-    }
+//    post {
+//        always {
+//            cleanWs()
+//        }
+//    }
 }
